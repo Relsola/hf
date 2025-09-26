@@ -254,6 +254,26 @@ class basic_string {
     return *(_buffer + n);
   }
 
+  reference front() noexcept {
+    assert(!empty());
+    return *begin();
+  }
+
+  const_reference front() const noexcept {
+    assert(!empty());
+    return *begin();
+  }
+
+  reference back() noexcept {
+    assert(!empty());
+    return *(end() - 1);
+  }
+
+  const_reference back() const noexcept {
+    assert(!empty());
+    return *(end() - 1);
+  }
+
   const_pointer data() const noexcept { return _buffer; }
 
   const_pointer c_str() const noexcept { return _buffer; }

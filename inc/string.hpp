@@ -4,7 +4,7 @@
 
 namespace hf {
 
-template <class _CharT>
+template <typename CharType>
 struct char_traits;
 
 template <>
