@@ -307,7 +307,7 @@ template <typename T>
 const size_t vector<T>::get_new_cap(size_t add_size) const noexcept {
   const auto old_size = capacity();
 
-  if (old_size > max_size() - old_size >> 1) {
+  if (old_size > max_size() - (old_size >> 1)) {
     return old_size + add_size > max_size() - _INIT_SIZE ? old_size + add_size
                                                          : old_size + add_size + _INIT_SIZE;
   }
